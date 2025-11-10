@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="level">
+    <div class="level-left">
+        <div class="level-item"><h1 class="title">Entradas</h1></div>
+    </div>
+    <div class="level-right">
+        <div class="level-item"><a class="button is-primary" href="{% url 'entrada:new_entrada' %}">Novo</a></div>
+    </div>
+</div>
+
+<div class="box">
+    <table class="table is-fullwidth is-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entrada in entradas %}
+            <tr>
+                <td>{{ entrada.id }}</td>
+                <td>{{ entrada.produto }}</td>
+                <td>{{ entrada.preco }}</td>
+                <td>{{ entrada.quantidade }}</td>
+                <td>
+                    <div class="buttons">
+                        <a class="button is-primary" href="{% url 'entrada:update_entrada' entrada.id %}">Alterar</a>
+                        <a class="button is-danger" href="{% url 'entrada:delete_entrada' entrada.id %}">Deletar</a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

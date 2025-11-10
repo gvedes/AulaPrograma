@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2 class="title">Excluir Saída</h2>
+
+  <div class="box">
+    <form method="post">
+      {% csrf_token %}
+      <p>Tem certeza que deseja excluir esta saída?</p>
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" class="button is-danger">Excluir</button>
+        </div>
+        <div class="control">
+          <a class="button" href="{% url 'saida:list_saida' %}">Cancelar</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

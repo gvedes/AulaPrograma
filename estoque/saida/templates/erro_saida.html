@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="notification is-danger">
+    <h2 class="title is-4">Erro de Saída</h2>
+    <p>Você tentou retirar uma quantidade acima do disponível no estoque.</p>
+    <a class="button is-light mt-3" href="{% url 'saida:list_saida' %}">Voltar</a>
+</div>
+
+{% endblock %}

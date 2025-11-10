@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="title">Nova Entrada</h1>
+<div class="box">
+    <form action="{% url 'entrada:new_entrada' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="field">
+            <div class="control">
+                <button class="button is-primary" type="submit">Salvar</button>
+                <a class="button" href="{% url 'entrada:list_entrada' %}">Cancelar</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

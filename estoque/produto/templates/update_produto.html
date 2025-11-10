@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="title">Alterar produto</h1>
+<div class="box">
+  <form action="{% url 'produto:update_produto' pk %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="field">
+      <div class="control">
+        <button type="submit" class="button is-primary">Salvar</button>
+        <a class="button" href="{% url 'produto:list_produto' %}">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
