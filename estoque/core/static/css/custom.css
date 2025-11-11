@@ -1,0 +1,37 @@
+/* ===== ESTOQUE - minimal custom CSS ===== */
+
+/* Keep only the background and animations. Other colors and visuals will
+   fall back to Bulma defaults. */
+
+/* BACKGROUND */
+body {
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+}
+
+/* Keep container/section spacing but do not override Bulma colors */
+.app-container {
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 1.5rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Keep small responsive tweaks only */
+@media (max-width: 768px) {
+  .app-container { padding: 1rem; }
+}
+

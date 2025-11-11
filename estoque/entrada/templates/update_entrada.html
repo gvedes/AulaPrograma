@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="title">Alterar Entrada</h1>
+<h1 class="title is-2 has-text-grey-dark">Alterar Entrada</h1>
 <div class="box">
     <form action="{% url 'entrada:update_entrada' pk %}" method="POST">
         {% csrf_token %}

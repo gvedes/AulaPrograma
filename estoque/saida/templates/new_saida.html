@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="title">Nova Saída</h1>
+<h1 class="title is-2 has-text-grey-dark">Nova Saída</h1>
 <div class="box">
     <form action="{% url 'saida:new_saida' %}" method="POST">
         {% csrf_token %}

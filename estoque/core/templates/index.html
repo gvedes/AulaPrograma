@@ -1,7 +1,67 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h1 class="title">Aplicação Estoque Web</h1>
-  <div class="content">
-    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus.</p>
-  </div>
+  
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="box has-background-white-bis">
+            <p class="heading has-text-black">📦 Produtos</p>
+            <p class="title is-5 has-text-black">Gestão Completa</p>
+            <p class="has-text-black">Cadastre, visualize e atualize todos os seus produtos. Controle nome, cor, descrição e preço em um só
+              lugar.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="box has-background-white-bis">
+            <p class="heading has-text-black">📥 Entradas</p>
+            <p class="title is-5 has-text-black">Recebimentos</p>
+            <p class="has-text-black">Registre novas entradas de produtos no estoque. Aumente a quantidade de itens e mantenha o histórico
+              atualizado.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="box has-background-white-bis">
+            <p class="heading has-text-black">📤 Saídas</p>
+            <p class="title is-5 has-text-black">Dispensas</p>
+            <p class="has-text-black">Controle as saídas de produtos com validação automática. Garanta que nunca falte estoque com controles
+              inteligentes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section has-background-light-grey">
+    <div class="container">
+      <h2 class="title is-3 has-text-primary">Por que usar nosso sistema?</h2>
+      <div class="content">
+        <ul>
+          <li><strong class="has-text-primary">Rastreabilidade completa:</strong> Mantenha um histórico detalhado de todas as operações.</li>
+          <li><strong class="has-text-primary">Validação automática:</strong> Sistema impede erros de estoque negativo.</li>
+          <li><strong class="has-text-primary">Interface intuitiva:</strong> Design limpo e responsivo, funciona em qualquer dispositivo.</li>
+          <li><strong class="has-text-primary">Controle em tempo real:</strong> Visualize o status do seu estoque instantaneamente.</li>
+          <li><strong class="has-text-primary">Fácil de usar:</strong> Não é necessário treinamento complexo.</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        
+        <section class="section">
+          <div class="container has-text-centered">
+            <h2 class="title is-3 mb-5 has-text-primary">Comece agora</h2>
+            <p class="mb-5">Escolha uma das opções abaixo para começar a gerenciar seu estoque:</p>
+            <div class="buttons is-centered">
+              <a class="button is-primary is-medium" href="{% url 'produto:list_produto' %}">
+                <span>Ver Produtos</span>
+              </a>
+              <a class="button is-info is-medium" href="{% url 'entrada:list_entrada' %}">
+                <span>Registrar Entrada</span>
+              </a>
+              <a class="button is-warning is-medium" href="{% url 'saida:list_saida' %}">
+                <span>Registrar Saída</span>
+              </a>
+            </div>
+          </div>
+  </section>
 {% endblock %}

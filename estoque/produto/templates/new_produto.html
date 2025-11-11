@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="title">Novo produto</h1>
+<h1 class="title is-2 has-text-grey-dark">Novo produto</h1>
 <div class="box">
   <form action="{% url 'produto:new_produto' %}" method="POST">
     {% csrf_token %}

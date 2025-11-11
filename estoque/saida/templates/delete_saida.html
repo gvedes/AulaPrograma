@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h2 class="title">Excluir Saída</h2>
+  <h2 class="title is-2 has-text-grey-dark">Excluir Saída</h2>
 
   <div class="box">
     <form method="post">
       {% csrf_token %}
-      <p>Tem certeza que deseja excluir esta saída?</p>
+      <p class="title is-3 has-text-grey-dark">Tem certeza que deseja excluir esta saída?</p>
       <div class="field is-grouped">
         <div class="control">
           <button type="submit" class="button is-danger">Excluir</button>
